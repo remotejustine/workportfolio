@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JDBOSE | B2B Business Development</title>
 <meta name="description" content="Justine Dale Bose helps SaaS and service companies with lead generation, appointment setting, cold email, LinkedIn outreach, CRM management and closing.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 28 28%22%3E%3Crect width=%2228%22 height=%2228%22 rx=%228%22 fill=%22%238CCFFF%22/%3E%3Crect x=%227%22 y=%2215%22 width=%223.6%22 height=%226%22 rx=%221.2%22 fill=%22%23111827%22/%3E%3Crect x=%2212.2%22 y=%2211%22 width=%223.6%22 height=%2210%22 rx=%221.2%22 fill=%22%23111827%22/%3E%3Crect x=%2217.4%22 y=%227%22 width=%223.6%22 height=%2214%22 rx=%221.2%22 fill=%22%23111827%22/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%238CCFFF'/%3E%3Cpath d='M18 10.5v14.5a5 5 0 0 1-10 0' fill='none' stroke='%23111827' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 10.5h3.5a9.5 9.5 0 0 1 0 19H18' fill='none' stroke='%23111827' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,7 +51,8 @@ header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background 
 header.nav[data-scrolled]{background:var(--glass);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 1px 0 var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.mark{width:32px;height:32px;flex:none}
+.mark{width:40px;height:40px;flex:none;transition:transform .4s var(--spring)}
+.logo:hover .mark{transform:rotate(-8deg) scale(1.06)}
 .word{font:800 1.02rem Inter,sans-serif;letter-spacing:.14em}
 .word b{font-weight:800;color:var(--accent-text)}
 .links{display:flex;gap:2px;padding:4px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
@@ -126,7 +127,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .5s ease,transfor
 .status i{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:live 2s infinite}
 @keyframes live{0%{box-shadow:0 0 0 0 rgba(34,197,94,.55)}70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
 .profile{display:flex;flex-direction:column;gap:14px}
-.avatar{width:72px;height:72px;border-radius:22px;background:var(--dark);color:var(--accent);display:grid;place-items:center;font:800 1.5rem Inter,sans-serif;letter-spacing:.04em}
+.avatar{width:72px;height:72px;display:block}
 .profile .name{font-size:1.25rem;font-weight:700;line-height:1.2}
 .facts{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.92rem}
 .facts li{display:flex;gap:10px;align-items:center}
@@ -212,7 +213,7 @@ footer a{text-decoration:none}
 
 <header class="nav">
   <div class="wrap">
-    <a href="#about" class="logo" aria-label="JDBOSE home"><svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#8CCFFF"/><rect x="7" y="15" width="3.6" height="6" rx="1.2" fill="#111827"/><rect x="12.2" y="11" width="3.6" height="10" rx="1.2" fill="#111827"/><rect x="17.4" y="7" width="3.6" height="14" rx="1.2" fill="#111827"/></svg><span class="word">JD<b>BOSE</b></span></a>
+    <a href="#about" class="logo" aria-label="Justine Dale Bose, home"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#8CCFFF"/><path d="M18 10.5v14.5a5 5 0 0 1-10 0" fill="none" stroke="#111827" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 10.5h3.5a9.5 9.5 0 0 1 0 19H18" fill="none" stroke="#111827" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <nav class="links" id="links" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -245,7 +246,7 @@ footer a{text-decoration:none}
       </div>
 
       <div class="t s4 profile reveal">
-        <div class="avatar" aria-hidden="true">JD</div>
+        <svg class="avatar" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#8CCFFF"/><path d="M18 10.5v14.5a5 5 0 0 1-10 0" fill="none" stroke="#111827" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 10.5h3.5a9.5 9.5 0 0 1 0 19H18" fill="none" stroke="#111827" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div>
           <div class="name">Justine Dale Bose</div>
           <div class="muted">Senior Business Development Specialist</div>
