@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Justine Dale Bose — Business Development</title>
+<meta name="description" content="Justine Dale Bose — Senior Business Development Specialist. 6 years of B2B lead generation, outbound sales and pipeline growth for SaaS and digital service companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#15171a; --muted:#5d6168; --line:#e4e0d6;
+  --accent:#0f6b4f; --accent-soft:#e3f1ea; --accent-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101312; --surface:#171b1a; --ink:#eef0ee; --muted:#9aa3a0; --line:#27302d;
+    --accent:#4cc597; --accent-soft:#16302a; --accent-ink:#0b1210;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101312; --surface:#171b1a; --ink:#eef0ee; --muted:#9aa3a0; --line:#27302d;
+  --accent:#4cc597; --accent-soft:#16302a; --accent-ink:#0b1210;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+@media(min-width:720px){.wrap{padding:0 32px}}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;margin:0}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.15rem;text-decoration:none}
+.links{display:flex;gap:22px;font-size:.92rem}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+@media(max-width:640px){.links{display:none}}
+
+/* hero */
+.hero{padding:88px 0 64px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.04;margin:14px 0 20px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 0 32px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:.92rem;margin-bottom:32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--surface);padding:24px 20px}
+.stat b{display:block;font-family:Fraunces,serif;font-size:2.1rem;font-weight:600;line-height:1.1;color:var(--accent)}
+.stat span{font-size:.88rem;color:var(--muted)}
+
+section{padding:80px 0 0}
+.head{margin-bottom:32px}
+.head h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-top:8px}
+
+/* skills */
+.skills{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:720px){.skills{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{font-size:1.15rem;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.84rem;padding:5px 12px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+
+/* experience */
+.job{display:grid;gap:8px 32px;padding:28px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+@media(min-width:800px){.job{grid-template-columns:240px 1fr}}
+.job .when{font-size:.88rem;color:var(--muted)}
+.job .co{font-weight:600;font-size:1rem;margin-bottom:2px}
+.job h3{font-size:1.35rem;margin-bottom:12px}
+.job ul{margin:0;padding-left:18px}
+.job li{margin:6px 0;color:var(--muted)}
+.job li strong{color:var(--ink);font-weight:600}
+
+/* education */
+.edu{display:grid;gap:20px;align-items:center}
+@media(min-width:720px){.edu{grid-template-columns:1fr auto}}
+.edu h3{font-size:1.4rem}
+.edu p{margin:4px 0 0;color:var(--muted)}
+
+/* contact */
+.contact{margin:80px 0 0;background:var(--ink);color:var(--bg);border-radius:24px;padding:56px 28px;text-align:center}
+.contact h2{font-size:clamp(1.8rem,5vw,2.8rem);margin:10px 0 14px}
+.contact p{color:color-mix(in srgb,var(--bg) 70%,transparent);max-width:520px;margin:0 auto 28px}
+.contact .eyebrow{color:var(--accent)}
+.contact .btn{border-color:var(--bg)}
+.contact .btns{justify-content:center}
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.85rem}
+.theme{background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--ink);font:inherit;font-size:.85rem;cursor:pointer}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Justine Dale Bose</a>
+    <div class="links">
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme" id="theme" aria-label="Toggle color theme">Theme</button>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div class="eyebrow">Senior Business Development Specialist</div>
+    <h1>I build pipelines that <em>close.</em></h1>
+    <p class="lead">6 years generating high-quality leads, closing B2B deals and scaling outbound sales across global markets — through data-driven outreach, strategic prospecting and CRM automation. Ready to drive pipeline growth for fast-moving SaaS and digital service companies.</p>
+    <div class="meta">
+      <span>📍 Davao, Philippines · Remote</span>
+      <span>✉️ remote.jdbose@gmail.com</span>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="mailto:remote.jdbose@gmail.com">Let's talk</a>
+      <a class="btn" href="#experience">See my track record</a>
+    </div>
+  </header>
+
+  <div class="stats" aria-label="Highlights">
+    <div class="stat"><b>$850K+</b><span>New revenue closed &amp; sourced</span></div>
+    <div class="stat"><b>52</b><span>New clients signed in 2023</span></div>
+    <div class="stat"><b>400+</b><span>Qualified leads in 6 months</span></div>
+    <div class="stat"><b>+45%</b><span>MQL-to-SQL conversion lift</span></div>
+  </div>
+
+  <section id="skills">
+    <div class="head">
+      <div class="eyebrow">What I do</div>
+      <h2>Skills &amp; tools</h2>
+    </div>
+    <div class="skills">
+      <div class="card">
+        <h3>Prospecting &amp; Outreach</h3>
+        <div class="tags">
+          <span class="tag">B2B Lead Generation</span><span class="tag">Cold Email</span><span class="tag">Cold Calling</span><span class="tag">LinkedIn Outreach</span><span class="tag">Account-Based Marketing</span><span class="tag">Copywriting</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Pipeline &amp; Reporting</h3>
+        <div class="tags">
+          <span class="tag">SQL Generation</span><span class="tag">Pipeline Management</span><span class="tag">Email Campaigns</span><span class="tag">KPI Reporting</span><span class="tag">Lead Scoring</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Tech Stack</h3>
+        <div class="tags">
+          <span class="tag">HubSpot</span><span class="tag">Salesforce</span><span class="tag">Pipedrive</span><span class="tag">Apollo</span><span class="tag">Instantly</span><span class="tag">Lemlist</span><span class="tag">Sales Navigator</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="head">
+      <div class="eyebrow">Track record</div>
+      <h2>Professional experience</h2>
+    </div>
+
+    <article class="job">
+      <div><div class="co">Let's Roam</div><div class="when">Oct 2024 – Apr 2025</div></div>
+      <div>
+        <h3>Account Executive</h3>
+        <ul>
+          <li>Closed <strong>$150K+ in net-new revenue</strong> by tailoring event solutions to each client's team-building goals.</li>
+          <li>Increased conversion rate by <strong>30%</strong> by refining sales scripts and building CRM-driven follow-up workflows.</li>
+          <li>Facilitated <strong>20+ corporate events</strong> with a 95% satisfaction rating and repeat bookings.</li>
+          <li>Owned the full sales cycle: prospecting, consultative selling, objection handling, negotiation and account management.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><div class="co">Geonode</div><div class="when">Jul 2024 – Dec 2024</div></div>
+      <div>
+        <h3>Senior Sales Representative</h3>
+        <ul>
+          <li>Delivered <strong>400+ qualified leads</strong> through targeted email and LinkedIn outreach with ICP-driven messaging.</li>
+          <li>Boosted MQL-to-SQL conversion by <strong>45%</strong> by aligning sales with marketing campaigns.</li>
+          <li>Exceeded quarterly revenue targets by <strong>20%</strong> through proactive pipeline management.</li>
+          <li>Automated workflows with Apollo, Instantly and HubSpot to improve outbound velocity.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><div class="co">H Street Digital</div><div class="when">Jan 2024 – Nov 2024</div></div>
+      <div>
+        <h3>Sales Development Representative</h3>
+        <ul>
+          <li>Sourced and qualified leads across 10+ e-commerce niches, contributing to <strong>$200K+ in new client revenue</strong>.</li>
+          <li>Built cold email sequences with <strong>12%+ reply rates</strong> and 50+ booked meetings.</li>
+          <li>Kept CRM data clean for reliable forecasting and better campaign performance.</li>
+          <li>Analyzed funnel metrics to sharpen targeting and reduce lead acquisition costs.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><div class="co">Terrier Agency</div><div class="when">May 2021 – Aug 2023</div></div>
+      <div>
+        <h3>Head of Lead Generation</h3>
+        <ul>
+          <li>Led the team to <strong>52 new clients in 2023</strong>, generating ~$500K in annualized revenue.</li>
+          <li>Built and segmented a <strong>20,000+ contact</strong> lead database for sharper personalization.</li>
+          <li>Lifted team performance by <strong>30%</strong> through training, daily tracking and sales playbooks.</li>
+          <li>Introduced lead scoring and engagement metrics to shorten the sales cycle.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><div class="co">Salesfort</div><div class="when">Mar 2020 – Aug 2022</div></div>
+      <div>
+        <h3>Sales Representative / Research Assistant</h3>
+        <ul>
+          <li>Cold-called U.S. optometry clinics, compiling competitive pricing data that shaped outbound strategy.</li>
+          <li>Managed a <strong>9,000+ contact</strong> CRM, improving segmentation and retargeting efficiency by 40%.</li>
+          <li>Delivered research that strengthened market intelligence and targeting.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="education">
+    <div class="head">
+      <div class="eyebrow">Foundation</div>
+      <h2>Education</h2>
+    </div>
+    <div class="card edu">
+      <div>
+        <h3>BS Business Management</h3>
+        <p>Ateneo de Davao University · 2014 – 2018</p>
+      </div>
+      <div class="tags">
+        <span class="tag">Dean's Lister</span><span class="tag">President's Scholar</span><span class="tag">VP, Ateneo Society of Management Students</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="eyebrow">Open to new roles</div>
+    <h2>Need more pipeline?</h2>
+    <p>I'm looking to help a SaaS or digital service team grow its pipeline and land more clients. Let's chat about your goals.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:remote.jdbose@gmail.com">remote.jdbose@gmail.com</a>
+      <a class="btn" href="tel:+639688528044">+63 968 852 8044</a>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Justine Dale Bose · Davao, Philippines</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var root = document.documentElement, btn = document.getElementById('theme');
+  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch(e){}
+  btn.addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
