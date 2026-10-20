@@ -211,7 +211,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent-t
 .form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
 .form-foot small{color:var(--muted)}
 #form-note.ok{color:#16a34a;font-weight:600}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+#form-note.err{color:#dc2626;font-weight:600}
 .btn:disabled{opacity:.7;cursor:progress;transform:none}
 .contact-info{display:flex;flex-direction:column;gap:18px}
 .contact-info h3{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.7rem;line-height:1.15}
@@ -457,7 +457,6 @@ footer a:hover{color:var(--ink)}
               <option>Not sure yet</option>
             </select>
           </label>
-          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <label class="full">What are you selling, and who to?<textarea id="f-msg" name="message" placeholder="Example: We sell HR software to US companies with 50 to 500 employees and need 10 meetings a month."></textarea></label>
           <div class="full form-foot">
             <button class="btn primary" type="submit">Send inquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
@@ -618,11 +617,11 @@ footer a:hover{color:var(--ink)}
     var name = d.getElementById('f-name'), email = d.getElementById('f-email');
     note.className = '';
     if (!name.value.trim() || !email.value.trim() || !email.checkValidity()){
+      note.className = 'err';
       note.textContent = 'Please add your name and a valid email address.';
       (name.value.trim() ? email : name).focus();
       return;
     }
-    if (form.querySelector('[name="_honey"]').value) return;
     var company = d.getElementById('f-company').value, msg = d.getElementById('f-msg').value;
     var body = 'Name: ' + name.value + '\nEmail: ' + email.value + '\nCompany: ' + company + '\nRole needed: ' + roleSel.value + '\n\n' + msg;
     var label = sendBtn.innerHTML;
@@ -636,12 +635,17 @@ footer a:hover{color:var(--ink)}
         _subject: 'New website inquiry: ' + roleSel.value, _template: 'table', _replyto: email.value
       })
     }).then(function(r){ return r.json(); }).then(function(res){
-      if (!res || String(res.success) !== 'true') throw new Error('not sent');
+      if (!res || String(res.success) !== 'true') throw new Error((res && res.message) || 'not sent');
       form.reset();
       note.className = 'ok';
       note.textContent = 'Thanks, your message was sent. I will get back to you by email.';
-    }).catch(function(){
-      note.textContent = 'The form could not send right now, so your email app will open with your message instead.';
+    }).catch(function(err){
+      note.className = 'err';
+      if (/activat/i.test(String(err && err.message))){
+        note.textContent = 'This form is waiting for activation. Check ' + INBOX + ' for the FormSubmit activation email, click the link, then send again.';
+        return;
+      }
+      note.textContent = 'The form could not send right now. Your email app will open with your message, or email ' + INBOX + ' directly.';
       location.href = 'mailto:' + INBOX + '?subject=' + encodeURIComponent('New inquiry: ' + roleSel.value) + '&body=' + encodeURIComponent(body);
     }).then(function(){ sendBtn.disabled = false; sendBtn.innerHTML = label; });
   });
